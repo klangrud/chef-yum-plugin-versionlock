@@ -22,7 +22,7 @@ template '/etc/yum/pluginconf.d/versionlock.conf' do
   source 'versionlock.conf.erb'
   variables(
     enabled: node['yum-plugin-versionlock']['enabled'],
-    listfile: node['yum-plugin-versionlock']['listfile'],
+    listfile: node['yum-plugin-versionlock']['locklist'],
     follow_obsoletes: node['yum-plugin-versionlock']['follow_obsoletes']
   )
 end
